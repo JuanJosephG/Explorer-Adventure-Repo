@@ -1,4 +1,4 @@
-Chapter 2 - Learning to Push to GitHub
+Chapter 2 - Learning to Push to GitHub Part 1
 
 We have learned the commands to push our files to github in three commands
 
