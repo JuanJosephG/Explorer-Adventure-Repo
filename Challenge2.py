@@ -1,5 +1,5 @@
 class hash_table :
-    def _init_ (self, size):
+    def __init__ (self, size=10):
         self.size = size
         self.hash_table = {} #dictionary
     
