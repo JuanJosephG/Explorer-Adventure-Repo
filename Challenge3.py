@@ -20,19 +20,22 @@ class LibraryCatalog():
       
     def Book_add(self, title, Author, Isbn, Genre, Copies):
         New_book = Book(title, Author, Isbn, Genre, Copies)
-        self.Book.append(New_book)
+        self.Book.append(New_book)   #adding book to list
         print("book added")
 
     def Book_remove(self, title):
         for Book in self.Book:
             if Book.Title  == title:
-                self.Book.remove(Book)
+                self.Book.remove(Book)  #remove book from list
                 print("Book has been removed")
     def Book_display(self):
             for Book in self.Book:
-                print(f"Title:{Book.Title}, Author:{Book.Author}, ISBN:{Book.Isbn}, Genre:{Book.Genre}, Copies:{Book.Copies}")
-    def Book_search():
-        pass
+                print(f"Title:{Book.Title}, Author:{Book.Author.Auth_name}, ISBN:{Book.Isbn}, Genre:{Book.Genre}, Copies:{Book.Copies}")
+    def Book_search(self, title):
+        for Book in self.Book:
+            if Book.Title == title: 
+                print(f"Title:{Book.Title}, Author:{Book.Author.Auth_name}, ISBN:{Book.Isbn}, Genre:{Book.Genre}, Copies:{Book.Copies}")
+        
         #user Interactions
 
 Library_catalog = LibraryCatalog()
@@ -46,4 +49,6 @@ Library_catalog.Book_add("Eating Food", Author("Donald", "1960-02-15", "USA"),"3
 Library_catalog.Book_remove("Python")
 #display all books
 Library_catalog.Book_display()
+#Search Book 
+Library_catalog.Book_search("Dragons")
 
